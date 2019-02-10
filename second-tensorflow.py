@@ -105,3 +105,11 @@ import tensorflow as tf
 # ______________________________________________________________
 
 # ====================== random constants ======================
+
+a = tf.random_normal([2, 2], mean=0, stddev=1, dtype=tf.float32)
+b = tf.truncated_normal([2,2], mean=0, stddev=1, dtype=tf.float32)
+c = tf.random_uniform([2,2], minval=0, maxval=None, dtype=tf.float32)
+d = tf.random_shuffle([12, 35, 64, 5, 16])
+
+with tf.Session() as session:
+    print(session.run(a), session.run(b), session.run(c), session.run(d))
