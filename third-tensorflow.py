@@ -11,7 +11,7 @@ with tf.Session() as session:
     print(session.run(tf.add_n([a, b, a])))
     print(session.run(tf.multiply(a, b)))
     # print(session.run(tf.matmul(a, b)))
-    print(session.run(tf.matmul(tf.reshape(a, shape=[1, 2]), tf.reshape(b, shape=[2, 1]))))
+    print(session.run(tf.matmul(tf.reshape(a, shape=[1, 2]), tf.reshape(b, shape=[2, 1])))) # matrix multiplication
     print(session.run(tf.div(a, b)))
     print(session.run(tf.mod(a, b)))
 
